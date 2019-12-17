@@ -127,11 +127,11 @@ void SSLServer::Accepter()
 		SSL *ssl = SSL_new(m_ssl_ctx);
 		SSL_set_fd(ssl, socket);
 
-		if (SSL_accept(ssl) == -1)
+		/*if (SSL_accept(ssl) == -1)
 		{
 			ERR_print_errors_fp(stderr);
 			abort();
-		}
+		}*/
 
 		m_isClientInitalised[m_clients.size()] = false;
 		m_clients.push_back(ssl);

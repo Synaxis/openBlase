@@ -405,7 +405,7 @@ protected:
 		printf("client connected! %s:%i\n", getClientIP(cid), getClientPort(cid));
 
 		//m_blaseClients[cid] = new BlazeClient("gosredirector.ea.com", 42127);
-		m_blaseClients[cid] = new BlazeClient("192.168.1.246", 42127);
+		m_blaseClients[cid] = new BlazeClient("192.168.1.104", 42127);
 		m_blaseClients[cid]->cid = cid;
 	}
 
@@ -470,7 +470,7 @@ protected:
 	{
 		printf("client connected! %s:%i\n", getClientIP(cid), getClientPort(cid));
 
-		m_blaseClients[cid] = new MasterClient("192.168.1.246", 42129);
+		m_blaseClients[cid] = new MasterClient("192.168.1.104", 42129);
 		m_blaseClients[cid]->cid = cid;
 	}
 
@@ -498,7 +498,7 @@ protected:
 
 int main(int argc, char* argv[])
 {
-	//freopen("stdout.log", "w", stdout);
+	freopen("stdout.log", "w", stdout);
 
 	WSADATA wsadata;
 	int startres = WSAStartup(MAKEWORD(2, 2), &wsadata);
